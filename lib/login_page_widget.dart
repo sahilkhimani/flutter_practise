@@ -532,7 +532,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              Navigator.pushNamed(context, "/signupPage");
+                              Navigator.pushNamed(context, "signupPage");
                             },
                             child: Text(
                               'Register Now',

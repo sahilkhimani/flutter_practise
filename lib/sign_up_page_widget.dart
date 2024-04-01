@@ -1,4 +1,3 @@
-//import '/auth/firebase_auth/auth_util.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 
 import 'package:flutter/material.dart';
@@ -77,17 +76,13 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
               children: [
                 SingleChildScrollView(
                   child: Column(
-                    mainAxisSize: MainAxisSize.max,
+                    mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Container(
-                          width: double.infinity,
                           height: 100,
-                          constraints: BoxConstraints(
-                            maxWidth: double.infinity,
-                          ),
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
@@ -98,7 +93,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                               child: Column(
-                                mainAxisSize: MainAxisSize.max,
+                                mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
                                   Flexible(
@@ -520,31 +515,8 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                           padding:
                               EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                           child: FFButtonWidget(
-                            onPressed: () async {
-                              // GoRouter.of(context).prepareAuthEvent();
-                              // if (_model.passwordController.text !=
-                              //     _model.confirnPasswordController.text) {
-                              //   ScaffoldMessenger.of(context).showSnackBar(
-                              //     SnackBar(
-                              //       content: Text(
-                              //         'Passwords don\'t match!',
-                              //       ),
-                              //     ),
-                              //   );
-                              //   return;
-                              // }
-
-                              // final user =
-                              //     await authManager.createAccountWithEmail(
-                              //   context,
-                              //   _model.emailController.text,
-                              //   _model.passwordController.text,
-                              // );
-                              // if (user == null) {
-                              //   return;
-                              // }
-
-                              // context.goNamedAuth('todo', context.mounted);
+                            onPressed: () {
+                              print('Button pressed ...');
                             },
                             text: 'Register',
                             options: FFButtonOptions(
@@ -673,7 +645,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              Navigator.pushNamed(context, "/LoginPage");
+                              Navigator.pushNamed(context, "loginPages");
                             },
                             child: Text(
                               'Login Now',

@@ -1,4 +1,5 @@
 import 'package:flutterflow_ui/flutterflow_ui.dart';
+
 import 'on_boarding_page_widget.dart' show OnBoardingPageWidget;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
